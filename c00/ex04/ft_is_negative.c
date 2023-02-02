@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcapa-pe <gcapa-pe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adimas-d < adimas-d@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 12:14:23 by gcapa-pe          #+#    #+#             */
-/*   Updated: 2023/01/29 18:45:07 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/02 18:02:17 by adimas-d          #+#    #+#             */
+/*   Updated: 2023/02/02 18:05:30 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ void	ft_is_negative(int n)
 	}	
 }
 
+/*
 int		main()
 {
 	ft_is_negative(-42);
 	return (0);
-}
+}*/

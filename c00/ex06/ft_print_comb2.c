@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcapa-pe <gcapa-pe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adimas-d < adimas-d@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 17:02:06 by gcapa-pe          #+#    #+#             */
-/*   Updated: 2023/01/29 18:47:31 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/02 18:03:46 by adimas-d          #+#    #+#             */
+/*   Updated: 2023/02/02 18:05:28 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,9 @@ void	ft_print_comb2(void)
 	}
 }
 
+/*
 int		main()
 {
 	ft_print_comb2();
 	return (0);
-}
+}*/

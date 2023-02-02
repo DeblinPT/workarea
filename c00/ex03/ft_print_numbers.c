@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcapa-pe <gcapa-pe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adimas-d < adimas-d@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 11:47:01 by gcapa-pe          #+#    #+#             */
-/*   Updated: 2023/01/29 18:44:00 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/02 18:01:37 by adimas-d          #+#    #+#             */
+/*   Updated: 2023/02/02 18:05:31 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ void	ft_print_numbers(void)
 	}
 }
 
+/*
 int		main()
 {
 	ft_print_numbers();
 	return (0);
-}
+}*/
