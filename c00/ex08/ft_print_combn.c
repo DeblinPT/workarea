@@ -6,7 +6,7 @@
 /*   By: adimas-d < adimas-d@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 22:08:09 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/02 23:39:32 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/04 15:28:50 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@ void	ft_print_combn(int n)
 	{
 		return ;
 	}
-	else
-	{
-		;
-	}
-	else
-		;
 }
 
 void	ft_print(int algarismo)
