@@ -6,14 +6,14 @@
 /*   By: adimas-d < adimas-d@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 23:11:32 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/04 23:29:28 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/05 18:54:36 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int tempdiv;
-	int tempmod;
+	int	tempdiv;
+	int	tempmod;
 
 	tempdiv = *a / *b;
 	tempmod = *a % *b;
@@ -21,7 +21,7 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	*b = tempmod;
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 
 int	main(void)
@@ -38,4 +38,4 @@ int	main(void)
 	ft_ultimate_div_mod(a, b);
 	printf("a: %p, *a: %d, b: %p, *b: %d\n", a, *a, b, *b);
 	return (0);
-}
+}*/

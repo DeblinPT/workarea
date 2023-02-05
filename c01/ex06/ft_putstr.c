@@ -6,23 +6,23 @@
 /*   By: adimas-d < adimas-d@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 23:30:17 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/05 03:22:16 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/05 18:54:11 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int i;
+	int	posicao;
 
-	i = 0;
-	while (str[i] != '\0')
+	posicao = 0;
+	while (str[posicao] != '\0')
 	{
-		i++;
+		posicao++;
 	}
-	return (i);
+	return (posicao);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
@@ -32,4 +32,4 @@ int	main(void)
 	size = ft_strlen(str);
 	printf("str=\"%s\"\nstrlen=%d\n", str, size);
 	return (0);
-}
+}*/
