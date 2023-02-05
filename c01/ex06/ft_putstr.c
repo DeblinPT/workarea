@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adimas-d < adimas-d@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/03 11:38:45 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/04 21:08:37 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/04 23:30:17 by adimas-d          #+#    #+#             */
+/*   Updated: 2023/02/05 03:22:16 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
+int	ft_strlen(char *str)
 {
-	*nbr = 42;
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
-/*#include<stdio.h>
+#include <stdio.h>
 
 int	main(void)
 {
-	int	a;
-	int *nbr;
-	
-	a = 8520;
-	nbr = &a;
-	printf("%d\n", *nbr);
-	ft_ft(nbr);
-	printf("%d\n", *nbr);
+	char 	*str = "42 is amazing bro";
+	int		size;
+
+	size = ft_strlen(str);
+	printf("str=\"%s\"\nstrlen=%d\n", str, size);
 	return (0);
-}*/
+}
