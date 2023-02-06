@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 01:00:56 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/06 18:57:05 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/06 19:09:29 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	
+
 	if (src[i] == '\0')
 		dest[i] = '\0';
 	return (0);
