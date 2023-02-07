@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 01:00:56 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/06 20:17:28 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/06 22:37:39 by adimas-d          #+#    #+#             */
+/*   Updated: 2023/02/06 22:53:54 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_strcpy(char *dest, char *src)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (str[i] > 96 && str[i] < 123)
+			str[i] -= 32;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }
 
 /*#include <stdio.h>
@@ -29,16 +29,18 @@ void	*ft_strcpy(char *dest, char *src)
 
 int	main(void)
 {
-	char *src;
-	char *dest;
-	char *ret;
+	char str1[] = "abcdefghi";
+	char str2[] = "AbcDefGhI";
+	char str3[] = "ABCDEFGHI";
 
-	src = calloc(11, sizeof(char));
-	src = "0123456789";
-	dest = calloc(9, sizeof(char));
-	ret = ft_strcpy(dest, src);	
-	printf("src: %s\n", src);
-	printf("dest: %s\n", dest);
-	printf("ret: %s\n", ret);
+	printf("str1: %s\n", str1);
+	printf("str2: %s\n", str2);
+	printf("str3: %s\n", str3);
+	ft_strupcase(str1);
+	ft_strupcase(str2);
+	ft_strupcase(str3);
+	printf("str1: %s\n", str1);
+	printf("str2: %s\n", str2);
+	printf("str3: %s\n", str3);
 	return (0);
 }*/

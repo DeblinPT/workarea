@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 01:00:56 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/06 20:17:28 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/06 22:48:39 by adimas-d          #+#    #+#             */
+/*   Updated: 2023/02/06 22:53:38 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_strcpy(char *dest, char *src)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (str[i] > 64 && str[i] < 91)
+			str[i] += 32;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }
 
 /*#include <stdio.h>
 #include <stdlib.h>
+char	*ft_strlowcase(char *str);
 
 int	main(void)
 {
-	char *src;
-	char *dest;
-	char *ret;
+	char str1[] = "abcdefghi";
+	char str2[] = "AbcDefGhI";
+	char str3[] = "ABCDEFGHI";
 
-	src = calloc(11, sizeof(char));
-	src = "0123456789";
-	dest = calloc(9, sizeof(char));
-	ret = ft_strcpy(dest, src);	
-	printf("src: %s\n", src);
-	printf("dest: %s\n", dest);
-	printf("ret: %s\n", ret);
+	printf("str1: %s\n", str1);
+	printf("str2: %s\n", str2);
+	printf("str3: %s\n", str3);
+	ft_strlowcase(str1);
+	ft_strlowcase(str2);
+	ft_strlowcase(str3);
+	printf("str1_low: %s\n", str1);
+	printf("str2_low: %s\n", str2);
+	printf("str3_low: %s\n", str3);
 	return (0);
 }*/
