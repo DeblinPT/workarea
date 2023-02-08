@@ -6,10 +6,9 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 22:52:44 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/07 00:28:07 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:02:00 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 char	*ft_strcapitalize(char *str)
 {
@@ -18,45 +17,28 @@ char	*ft_strcapitalize(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 65 || str[i] > 122 || (str[i] > 90 && str[i] < 97))
-			i++;
-		else if (str[i] > 64 && str[i] < 91)
+		if (str[i] > 64 && str[i] < 91)
 		{
 			if (str[i - 1] > 96 && str[i - 1] < 123)
 				str[i] += 32;
-			i++;
-		}
-		/*else if (str[i] < 47 && str[i] > 58)
-		{
-			if (str[i - 1] > 47 && str[i - 1] < 58)
-				i++;
-			else if (str[i - 1] > 64 && str[i - 1] < 91)
-				i++;
-			else if (str[i - 1] > 96 && str[i - 1] < 123)
-				i++;
-			else
-			{
+			else if (str[i - 1] > 65 && str[i - 1] < 91)
 				str[i] += 32;
-				i++;
-			}
-		}*/
-		else
-		{
-			str[i] -= 32;
-			i++;
+			else if (str[i - 1] > 47 && str[i - 1] < 58)
+				str[i] += 32;
 		}
+		if (str[i] > 96 && str[i] < 123)
+		{
+			if (str[i - 1] > 122 || str[i - 1] < 48)
+				str[i] -= 32;
+			else if (str[i - 1] > 90 && str[i - 1] < 97)
+				str[i] -= 32;
+		}
+		i++;
 	}
 	return (str);
 }
 
-/*if (str[i - 1] > 47 && str[i - 1] < 58)
-			i++;
-		else if (str[i - 1] > 64 && str[i - 1] < 91)
-			i++;
-		else if (str[i - 1] > 96 && str[i - 1] < 123)
-			i++;*/
-
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
@@ -86,4 +68,4 @@ int	main(void)
 	ft_strcapitalize(str6);
 	printf("str6_c: %s\n", str6);
 	return (0);
-}
+}*/
