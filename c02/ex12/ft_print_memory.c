@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 21:01:05 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/08 00:26:09 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/08 13:16:51 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,4 @@ void	*ft_print_memory(void *addr, unsigned int size)
 			ft_turn_hex(cpy[i]);
 		i++;
 	}
-}
-
-#include <string.h>
-
-int	main(void)
-{
-	char *str = "Bonjour les aminches\n\b\rc  est fou\ntout\rce qu on peut faire avec\r\r\nprint_memory\n\n\r\blol\rlol\r \b";
-
-	ft_print_memory(str, strlen(str));
-	return (0);
 }
