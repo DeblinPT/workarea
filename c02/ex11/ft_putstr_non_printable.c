@@ -6,11 +6,13 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 19:15:24 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/07 21:01:34 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:28:59 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c)
+#include <unistd.h>
+
+void	ft_mete_um_char(char c)
 {
 	write(1, &c, 1);
 }
@@ -26,7 +28,7 @@ void	ft_turn_hex(int num)
 		ft_turn_hex(num % 16);
 	}
 	else
-		ft_putchar(hex[num]);
+		ft_mete_um_char(hex[num]);
 }
 
 void	ft_putstr_non_printable(char *str)
@@ -36,25 +38,22 @@ void	ft_putstr_non_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] > 0 && str[i] < 32) || str[i] > 127)
+		if ((str[i] > 0 && str[i] < 32) || str[i] == 127)
 		{
-			ft_putchar('\\');
+			ft_mete_um_char('\\');
 			if (str[i] <= 15)
 			{
-				ft_putchar('0');
+				ft_mete_um_char('0');
 				ft_turn_hex(str[i]);
 			}
-			else
-				ft_turn_hex(str[i]);
+			ft_turn_hex(str[i]);
 		}
-		ft_putchar(str[i]);
+		ft_mete_um_char(str[i]);
 		i++;
 	}
 }
 
-/*#include <unistd.h>
-
-int	main(void)
+/*int	main(void)
 {
 	char str[] = {'0', '1', 2, 30, 16, '4', 'a', 19, 'C'};
 

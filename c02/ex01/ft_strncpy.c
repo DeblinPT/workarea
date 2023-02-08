@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 01:11:53 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/06 20:31:50 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:05:38 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ void	*ft_strncpy(char *dest, char *src, unsigned int n)
 	while (i < n)
 	{
 		dest[i] = '\0';
+		i++;
 	}
 	return (dest);
 }
 
-/*
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
