@@ -46,9 +46,9 @@ void	ft_putstr_non_printable(char *str)
 				ft_mete_um_char('0');
 				ft_turn_hex(str[i]);
 			}
-			ft_turn_hex(str[i]);
+			else ft_turn_hex(str[i]);
 		}
-		ft_mete_um_char(str[i]);
+		else ft_mete_um_char(str[i]);
 		i++;
 	}
 }
