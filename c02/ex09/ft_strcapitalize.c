@@ -21,18 +21,18 @@ char	*ft_strcapitalize(char *str)
 		{
 			if (str[i - 1] > 96 && str[i - 1] < 123)
 				str[i] += 32;
-			if (str[i - 1] > 65 && str[i - 1] < 91)
+			else if (str[i - 1] > 64 && str[i - 1] < 91)
 				str[i] += 32;
-			if (str[i - 1] > 47 && str[i - 1] < 58)
+			else if (str[i - 1] > 47 && str[i - 1] < 58)
 				str[i] += 32;
 		}
-		if (str[i] > 96 && str[i] < 123)
+		else if (str[i] > 96 && str[i] < 123)
 		{
 			if (str[i - 1] > 122 || str[i - 1] < 48)
 				str[i] -= 32;
-			if (str[i - 1] > 90 && str[i - 1] < 97)
+			else if (str[i - 1] > 90 && str[i - 1] < 97)
 				str[i] -= 32;
-			if (str[i - 1] > 57 && str[i - 1] < 65)
+			else if (str[i - 1] > 57 && str[i - 1] < 65)
 				str[i] -= 32;
 		}
 	}
