@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:15:23 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/09 16:19:35 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/13 14:48:58 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ char	*ft_strcat(char *dest, char *src)
 		dest[i + j] = src[j];
 		j++;
 	}
+	dest[i + j] = 0;
 	return (dest);
 }
 

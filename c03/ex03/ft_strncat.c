@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 22:24:02 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/09 22:31:42 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/13 15:06:56 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	{
 		i++;
 	}
-	while (j < nb)
+	while (src[j] && j < nb)
 	{
 		dest[i + j] = src[j];
 		j++;
