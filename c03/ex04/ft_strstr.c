@@ -6,32 +6,32 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:19:03 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/09 22:22:34 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/13 15:12:43 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_confirmaiton(char *s1, char *s2)
-{
-	while (*s2 != '\0')
-	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-	}
-	return (1);
-}
-
 char	*ft_strstr(char *str, char *to_find)
 {
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
 	if (*to_find == '\0')
 		return (str);
-	while (*str != *to_find)
-		str++;
-	if (ft_confirmaiton(str, to_find) == 0)
-		return (0);
-	else
-		return (str);
+	while (str[i] != 0)
+	{
+		while (str[i + j] == to_find[j])
+		{
+			if (to_find[j] == 0)
+			{
+				return (str + i);
+			}
+		j++;
+		}
+	i++;
+	}
+	return (0);
 }
 
 #include <stdio.h>
