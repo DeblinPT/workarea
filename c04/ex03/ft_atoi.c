@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 18:49:43 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/12 22:43:37 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/14 03:10:54 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_atoi(char *str)
 	num = 0;
 	multiplicador = 1;
 	index = 0;
-	while (str[index] == '\n' || str[index] == '\t' || str[index] == '\r'
+	while (str[index] >= '\n' || str[index] == '\t' || str[index] == '\r'
 		|| str[index] == '\v' || str[index] == '\f' || str[index] == ' ')
 	{
 		index++;
