@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base copy.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 22:48:57 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/13 20:04:37 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/14 02:44:54 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,22 @@ int	ft_errors(char *base)
 	int	j;
 
 	i = 0;
-	if (base[i] == 0 || ft_length(base) == 1)
-		return (1);
+	if (ft_length(base) <= 1)
+		return (0);
 	while (base[i] == '\0')
 	{
 		if (base[i] == '+' || base[i] == '-')
-			return (2);
-		j = i;
+			return (0);
+		j = i + 1;
 		while (j < ft_length(base))
 		{
 			if (base[i] == base[j])
-				return (3);
+				return (0);
 			j++;
 		}
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
@@ -56,15 +56,15 @@ void	ft_putnbr_base(int nbr, char *base)
 	long	nb;
 
 	nb = nbr;
-	if (ft_errors(base) == 0)
+	if (ft_errors(base) == 1)
 	{
 		if (nb < 0)
 		{
 			ft_print('-');
-			nb *= -1;
+			nb = -nb;
 		}
 		if (nb < ft_length(base))
-			ft_print(base[nb]);
+			ft_print(base[nb % ft_length(base)]);
 		if (nb >= ft_length(base))
 		{
 			ft_putnbr_base(nb / (ft_length(base)), base);
