@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 22:32:33 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/12 00:24:04 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:59:28 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		dest_size++;
 	while (src[src_size] != 0)
 		src_size++;
-	if (size <= dest_size)
+	if (size == 0 || size <= dest_size)
 		return (size + src_size);
-	while (size > (dest_size + i + 1) && src[i])
+	while (size > (dest_size + 1) && src[i])
 	{
 		dest[dest_size + i] = src[i];
 		i++;

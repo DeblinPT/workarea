@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:19:03 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/14 03:10:54 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:02:55 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ char	*ft_strstr(char *str, char *to_find)
 	{
 		while (str[i + j] == to_find[j])
 		{
-			if (to_find[j] == 0)
-			{
-				return (str + i);  //acho que o erro esta aqui
-			}
+			if (to_find[j + 1] == 0)
+				return (str + i);
 		j++;
 		}
 	i++;
