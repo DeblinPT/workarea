@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 18:10:37 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 19:41:28 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/08 17:36:47 by pmessett          #+#    #+#             */
+/*   Updated: 2023/02/15 20:33:50 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_iterative_factorial(int nb)
+int	*ft_range(int min, int max)
 {
-	int	res;
+	int	*arr;
+	int	i;
 
-	res = nb;
-	if (nb < 0)
-		return (0);
-	if (nb == 1 || nb == 0)
-		return (1);
-	while (nb > 2)
+	i = 0;
+	arr = (int *)malloc(((max - min) + 1) * sizeof(int));
+	if (min >= max)
+		arr = NULL;
+	while (min < max)
+		arr[i++] = min++;
+	return (arr);
+}
+
+int	main(void)
+{
+	int	i;
+	int	*arrint;
+
+	arrint = ft_range(1, 12);
+	if (arrint != NULL)
 	{
-		nb--;
-		res *= (nb);
+		for (i = 0; arrint[i] != '\0'; i++)
+			printf("%i ", arrint[i]);
 	}
-	return (res);
 }
-
-/*int	main(void)
-{
-	int	res;
-
-	res = ft_iterative_factorial(9);
-	printf("%d\n", res);
-	return (res);
-}
-*/

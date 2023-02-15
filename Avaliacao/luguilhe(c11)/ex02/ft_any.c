@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_any.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: luguilhe <luguilhe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 14:37:20 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 21:19:32 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/14 19:16:36 by luguilhe          #+#    #+#             */
+/*   Updated: 2023/02/15 18:06:57 by luguilhe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
+int	ft_any(char **tab, int (*f)(char *))
 {
-	int	srt;
-	int	index;
+	int	i;
 
-	index = 1;
-	if (nb <= 3)
-		return (0);
-	while (index <= (nb / index))
+	i = 0;
+	while (tab[i])
 	{
-		srt = index * index;
-		if (srt == nb)
-			return (index);
-		index++;
+		if ((*f)(tab[i]) != 0)
+		{
+			return (1);
+		}
+		i++;
 	}
 	return (0);
-}
-
-#include<stdio.h>
-
-int	main(void)
-{
-	printf("%d\n", ft_sqrt(2147483642));
 }

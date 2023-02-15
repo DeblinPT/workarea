@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_map.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: luguilhe <luguilhe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 18:10:37 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 19:41:28 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/14 18:00:04 by luguilhe          #+#    #+#             */
+/*   Updated: 2023/02/15 18:07:22 by luguilhe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include <stdlib.h>
 
-int	ft_iterative_factorial(int nb)
+int	*ft_map(int *tab, int length, int (*f)(int))
 {
-	int	res;
+	int	i;
+	int	*res;
 
-	res = nb;
-	if (nb < 0)
-		return (0);
-	if (nb == 1 || nb == 0)
-		return (1);
-	while (nb > 2)
+	i = 0;
+	res = (int *)malloc(sizeof(int) * length);
+	if (!res)
 	{
-		nb--;
-		res *= (nb);
+		return (0);
+	}
+	while (i < length)
+	{
+		res[i] = (*f)(tab[i]);
+		i++;
 	}
 	return (res);
 }
-
-/*int	main(void)
-{
-	int	res;
-
-	res = ft_iterative_factorial(9);
-	printf("%d\n", res);
-	return (res);
-}
-*/

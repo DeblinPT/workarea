@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 19:14:42 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/14 19:25:01 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/15 19:41:23 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_recursive_factorial(int nb)
 	int	res;
 
 	res = nb;
-	if (nb <= 0)
+	if (nb < 0)
 		return (0);
-	if (nb == 1)
+	if (nb == 1 || nb == 0)
 		return (1);
 	res *= ft_recursive_factorial(nb - 1);
 	return (res);

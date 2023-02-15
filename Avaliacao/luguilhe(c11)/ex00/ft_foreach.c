@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: luguilhe <luguilhe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 17:55:21 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 21:02:24 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/14 17:49:07 by luguilhe          #+#    #+#             */
+/*   Updated: 2023/02/15 18:09:14 by luguilhe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_find_next_prime(int nb)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
 	int	i;
 
-	i = 2;
-	if (nb < 2)
-		return (2);
-	while (i <= (nb / i))
+	i = 0;
+	while (i < length)
 	{
-		if (nb % i == 0)
-			return (ft_find_next_prime(++nb));
+		f(tab[i]);
 		i++;
 	}
-	return (nb);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%d\n", ft_find_next_prime(2147483647));
 }
