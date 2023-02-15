@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:42:58 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 17:54:59 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/15 23:33:15 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ int	ft_is_prime(int nb)
 	return (1);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
 	printf("%d\n", ft_is_prime(997));
 }
+*/

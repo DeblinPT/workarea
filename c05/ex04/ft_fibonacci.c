@@ -6,13 +6,13 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 13:48:17 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 14:35:43 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/15 23:32:20 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_fibonacci(int index)
+int	ft_fibonacci(int index)
 {
-	int res;
+	int	res;
 
 	if (index < 0)
 		return (-1);
@@ -26,9 +26,11 @@ int ft_fibonacci(int index)
 	}
 	return (res);
 }
-#include<stdio.h>
+
+/*#include<stdio.h>
 
 int	main(void)
 {
 	printf("%d\n", ft_fibonacci(12));
 }
+*/

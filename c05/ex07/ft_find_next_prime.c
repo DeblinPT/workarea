@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 17:55:21 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 21:02:24 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/15 23:31:40 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ int	ft_find_next_prime(int nb)
 	return (nb);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
 	printf("%d\n", ft_find_next_prime(2147483647));
 }
+*/
