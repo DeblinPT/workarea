@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 19:25:50 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 13:46:58 by adimas-d         ###   ########.fr       */
+/*   Created: 2023/02/15 13:34:54 by adimas-d          #+#    #+#             */
+/*   Updated: 2023/02/15 13:45:18 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
+int	ft_recursive_power(int nb, int power)
 {
 	int	res;
 
@@ -23,8 +23,9 @@ int	ft_iterative_power(int nb, int power)
 		return (nb);
 	while (power > 1)
 	{
-		res *= nb;
 		power--;
+		ft_recursive_power(nb, power);
+		res *= nb;
 	}
 	return (res);
 }
@@ -33,5 +34,5 @@ int	ft_iterative_power(int nb, int power)
 
 int	main(void)
 {
-	printf("%d\n", ft_iterative_power(2, 20));
+	printf("%d\n", ft_recursive_power(2, 20));
 }
