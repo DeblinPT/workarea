@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:19:03 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/16 13:28:46 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/16 19:48:30 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ char	*ft_strstr(char *str, char *to_find)
 		{
 			if (to_find[j + 1] == 0)
 				return (str + i);
-		j++;
+			j++;
 		}
 	i++;
 	}
 	return (0);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -52,7 +52,7 @@ int	main(void)
 				ft_buff);
 	else
 		printf("[1] OK. expected: %s result: %s\n", buff, ft_buff);
-	str = strcpy(calloc(11, sizeof(char)), "alo galera");
+	str = strcpy(calloc(17, sizeof(char)), "alo galeragalerA");
 	to_find = strcpy(calloc(7, sizeof(char)), "galerA");
 	buff = strstr(str, to_find);
 	ft_buff = ft_strstr(str, to_find);
@@ -72,3 +72,4 @@ int	main(void)
 		printf("[2] OK. expected: %s result: %s\n", buff, ft_buff);
 	return (0);
 }
+*/
