@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:46:42 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 23:12:27 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/15 23:38:09 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@ void	ft_putchar(char *c)
 
 	i = 0;
 	while (c[i] != 0)
-		{
-			write (1, &c, 1);
-			i++;
-		}
+	{
+		write (1, &c[i], 1);
+		i++;
+	}
+	write (1, "\n", 1);
 }
 
-int	main(int argc, char *argv)
+int	main(int argc, char **argv)
 {
 	if (argc == 1)
-		ft_putchar(argv);
+		ft_putchar(*argv);
 	return (0);
 }
