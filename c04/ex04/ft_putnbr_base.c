@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 22:48:57 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/14 17:57:13 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/16 13:11:57 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_errors(char *base)
 	i = 0;
 	if (ft_length(base) <= 1)
 		return (0);
-	while (base[i] == '\0')
+	while (base[i] != '\0')
 	{
 		if (base[i] == '+' || base[i] == '-')
 			return (0);
@@ -90,13 +90,13 @@ void	ft_putchar(char c)
 int		main(void)
 {
 	// base binaria
-	printf("Bases binarias, n = 47. \"01\" e \"\\/\"\n");
-	ft_putnbr_base(47, "01");
-	ft_putchar('\n');
-	printf("Esperado: 101111\n");
-	ft_putnbr_base(47, "\\/");
-	ft_putchar('\n');
-	printf("Esperado: /\\////\n");
+	// printf("Bases binarias, n = 47. \"01\" e \"\\/\"\n");
+	// ft_putnbr_base(47, "01");
+	// ft_putchar('\n');
+	// printf("Esperado: 101111\n");
+	// ft_putnbr_base(47, "\\/");
+	// ft_putchar('\n');
+	// printf("Esperado: /\\////\n");
 	// base 5
 	printf("Bases 5, n = 36. \"01345\" e \"sd2ek\"\n");
 	ft_putnbr_base(36, "01345");
@@ -106,24 +106,24 @@ int		main(void)
 	ft_putchar('\n');
 	printf("Esperado: d2d\n");
 	// base 10
-	printf("Bases 10, n = %d. \"0123456789\" e \",.;\\][{}@#\"\n", INT_MIN);
-	ft_putnbr_base(INT_MIN, "0123456789");
-	ft_putchar('\n');
-	printf("Esperado: -2147483648\n");
-	ft_putnbr_base(INT_MIN, ",.;\\][{}@#");
-	ft_putchar('\n');
-	printf("Esperado: -;.]}]@\\{]@\n");
+	// printf("Bases 10, n = %d. \"0123456789\" e \",.;\\][{}@#\"\n", INT_MIN);
+	// ft_putnbr_base(INT_MIN, "0123456789");
+	// ft_putchar('\n');
+	// printf("Esperado: -2147483648\n");
+	// ft_putnbr_base(INT_MIN, ",.;\\][{}@#");
+	// ft_putchar('\n');
+	// printf("Esperado: -;.]}]@\\{]@\n");
 	// base 16
-	printf("Bases 16, n = -65040. \"0123456789ABCDEF\" e \"jdlskmnMKZxVuzfa\"\n");
-	ft_putnbr_base(-65040, "0123456789ABCDEF");
-	ft_putchar('\n');
-	printf("Esperado: -FE10\n");
-	ft_putnbr_base(-65040, "jdlskmnMKZxVuzfa");
-	ft_putchar('\n');
-	printf("Esperado: -afdj\n");
+	// printf("Bases 16, n = -65040. \"0123456789ABCDEF\" e \"jdlskmnMKZxVuzfa\"\n");
+	// ft_putnbr_base(-65040, "0123456789ABCDEF");
+	// ft_putchar('\n');
+	// printf("Esperado: -FE10\n");
+	// ft_putnbr_base(-65040, "jdlskmnMKZxVuzfa");
+	// ft_putchar('\n');
+	// printf("Esperado: -afdj\n");
 	// base 0 e base 1, nao pode aparecer nada
-	printf("Bases 0 e 1, nao deve aparecer nada, n = 256.\n");
-	ft_putnbr_base(-29092, "0");
-	ft_putnbr_base(-29092, "");
+	// printf("Bases 0 e 1, nao deve aparecer nada, n = 256.\n");
+	// ft_putnbr_base(-29092, "0");
+	// ft_putnbr_base(-29092, "");
 	return (0);
 }
