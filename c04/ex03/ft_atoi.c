@@ -6,55 +6,39 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 18:49:43 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/14 17:43:38 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/16 13:27:04 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-int	ft_sign(char *str, int *i)
-{
-	int	sign;
-	int	index;
-
-	index = *i;
-	sign = 0;
-	while (str[index] == '+' || str[index] == '-')
-	{
-		if (str[index] == '-')
-		{
-			sign++;
-		}
-		index++;
-	}
-	*i = index;
-	return (sign);
-}
 
 int	ft_atoi(char *str)
 {
-	int	index;
-	int	multiplicador;
+	int	i;
+	int	multiplicator;
 	int	num;
 
 	num = 0;
-	multiplicador = 1;
-	index = 0;
-	while ((str[index] >= 9 && str[index] == 13) || str[index] == ' ')
+	multiplicator = 1;
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		index++;
+		while (str[i] == '+' || str[i] == '-')
+		{
+			if (str[i] == '-')
+				multiplicator *= -1;
+		i++;
+		}
 	}
-	if (str[index] == '+' || str[index] == '-')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (ft_sign(str, &index) % 2 == 1)
-			multiplicador = -1;
+		num = (num * 10) + (str[i] - '0');
+		i++;
 	}
-	while (str[index] >= '0' && str[index] <= '9')
-	{
-		num = (num * 10) + (str[index] - '0');
-		index++;
-	}
-	num *= multiplicador;
+	num *= multiplicator;
 	return (num);
 }
 
