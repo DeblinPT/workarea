@@ -6,7 +6,28 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:47:11 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/15 20:31:57 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/16 02:11:45 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<unistd.h>
+
+int	main(int ac, char **av)
+{
+	int	i;
+	int	j;
+
+	i = ac - 1;
+	while (i > 0)
+	{
+		j = 0;
+		while (av[i][j] != 0)
+		{
+			write (1, &av[i][j], 1);
+			j++;
+		}
+		write (1, "\n", 1);
+		i--;
+	}
+	return (0);
+}
