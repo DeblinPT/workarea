@@ -6,22 +6,35 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 20:27:50 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/16 23:18:10 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/03/21 18:42:43 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include<unistd.h>
 
-int	main(int ac,char **av)
+void	ft_print_number(int number)
 {
-	if (ac == 1)
-		ft_fizzbuzz(av[1])
-	return (0);
+	if(number > 9)
+		ft_print_number(number / 10);
+	write (1, &"0123456789"[number % 10], 1);
 }
 
-
-
-void	ft_print(char print)
+int	main(void)
 {
-	write (1, &print, 1);
+	int	number;
+
+	number = 1;
+	while(number <= 10000000)
+	{
+		if (number % 3 == 0 && number % 5 == 0)
+			write(1, "FizzBuzz", 8);
+		else if (number % 5 == 0)
+			write(1, "Buzz", 4);
+		else if (number % 3 == 0)
+			write(1, "Fizz", 4);
+		else
+			ft_print_number(number);
+		number++;
+		write(1, "\n", 1);
+	}
 }
