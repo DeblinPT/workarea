@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 21:01:05 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/08 13:16:51 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/12 13:42:38 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void	ft_turn_hex(int num)
 
 void	*ft_print_memory(void *addr, unsigned int size)
 {
-	int	i;
-	char *cpy;
+	int		i;
+	char	*cpy;
 
 	cpy = addr;
 	i = 0;
@@ -44,11 +44,6 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		write (1, &addr[i], 16);
 		ft_putchar(':');
 		ft_putchar(' ');
-		while (j < 16)
-		{
-			/* code */
-		}
-		
 		if (cpy[i] == '\n')
 			ft_putchar(cpy[i]);
 		else

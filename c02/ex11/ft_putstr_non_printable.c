@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 19:15:24 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/09 15:54:48 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/12 13:41:08 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,4 @@ void	ft_putstr_non_printable(char *str)
 		}
 		i++;
 	}
-}
-
-int	main(void)
-{
-	char str[] = {'0', '1', 2, 30, 16, '4', 'a', 19, 'C'};
-
-	ft_putstr_non_printable(str);
-	write(1, "\n", 1);
-	return (0);
 }

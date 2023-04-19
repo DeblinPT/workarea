@@ -6,7 +6,7 @@
 /*   By: adimas-d < adimas-d@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 11:38:45 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/04 21:08:37 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/05 20:17:43 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,3 @@ void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
-
-/*#include<stdio.h>
-
-int	main(void)
-{
-	int	a;
-	int *nbr;
-	
-	a = 8520;
-	nbr = &a;
-	printf("%d\n", *nbr);
-	ft_ft(nbr);
-	printf("%d\n", *nbr);
-	return (0);
-}*/

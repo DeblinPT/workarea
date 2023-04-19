@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:19:03 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/16 22:45:15 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/16 20:11:46 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ char	*ft_strstr(char *str, char *to_find)
 		return (str);
 	while (str[i] != 0)
 	{
-		while (str[i + j] == to_find[j] && str[i + j] != '\0')
+		while (str[i + j] == to_find[j])
 		{
-			if (to_find[j] == 0)
+			if (to_find[j + 1] == 0)
 				return (str + i);
 			j++;
 		}
-	i++;
+		i++;
 	}
 	return (0);
 }

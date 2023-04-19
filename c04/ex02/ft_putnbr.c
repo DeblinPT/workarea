@@ -6,7 +6,7 @@
 /*   By: adimas-d <adimas-d@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 18:14:09 by adimas-d          #+#    #+#             */
-/*   Updated: 2023/02/12 18:48:46 by adimas-d         ###   ########.fr       */
+/*   Updated: 2023/02/16 14:26:30 by adimas-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_putnbr(int nb)
 		ft_print(nb + 48);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	ft_putnbr(42);
 }
